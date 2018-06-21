@@ -1,0 +1,49 @@
+.loader {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+
+  .loading {
+    width: 55px;
+    height: 55px;
+    border: 6px solid rgba(0,122,135,0.25);
+    border-top-color: #007a87;
+    border-radius: 50%;
+    position: relative;
+    top: -15px;
+    animation: loader-rotate 1s linear infinite;
+
+    &:after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #007a87;
+      position: absolute;
+      top: -1px;
+      left: 33px;
+      border-radius: 50%;
+    }
+  }
+
+  .loading-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

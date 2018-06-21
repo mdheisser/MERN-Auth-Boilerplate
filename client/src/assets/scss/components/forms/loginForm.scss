@@ -1,0 +1,74 @@
+.login-form {
+  max-width: 100%;
+  width: 550px;
+  margin: 50px auto;
+  border: 1px solid #dce0e0;
+  background: #fff;
+  padding: 32px;
+
+  h1 {
+    text-align: center;
+    margin: 10px 0 40px;
+  }
+
+  .login-form-btm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0 20px;
+
+    .remember {
+
+      .remember-text {
+
+      }
+    }
+
+    .show-pass {
+      color: #008489;
+      font-size: 13px;
+      font-weight: 700;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .forgot-password {
+    text-align: center;
+    color: #008489;
+    font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .callout {
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    position: relative;
+    padding-top: 5px;
+
+    a {
+      font-weight: 700;
+      color: #008489;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .login-form {
+    width: 100%;
+    border: 0;
+    padding: 20px;
+  }
+}

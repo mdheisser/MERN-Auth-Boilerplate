@@ -1,0 +1,37 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && babel src -d build",
+    "clean": "rimraf ./build/*",
+    "start-dev": "cross-env NODE_ENV=development nodemon --exec babel-node -- src/index.js",
+    "start-prod": "NODE_ENV=production node build/index.js",
+    "install-packages-prod": "npm install --production"
+  },
+  "author": "Jeremy Stocker",
+  "license": "ISC",
+  "dependencies": {
+    "aws-param-env": "^1.2.0",
+    "aws-param-store": "^2.0.0",
+    "aws-sdk": "^2.259.1",
+    "bcrypt": "^2.0.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-mongo-sanitize": "^1.3.2",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.1.5",
+    "mongoose-unique-validator": "^2.0.1",
+    "nodemailer": "^4.6.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "rimraf": "^2.6.2"
+  }
+}

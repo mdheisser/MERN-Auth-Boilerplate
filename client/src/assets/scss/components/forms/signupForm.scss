@@ -1,0 +1,46 @@
+.signup-form {
+  max-width: 100%;
+  width: 550px;
+  margin: 50px auto;
+  border: 1px solid #dce0e0;
+  background: #fff;
+  padding: 32px;
+
+  h1 {
+    text-align: center;
+    margin: 10px 0 40px;
+  }
+
+  .agree-terms {
+    margin: 10px 0 20px;
+  }
+
+  .agree {
+    font-size: 13px;
+    text-align: center;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      color: #333;
+      font-size: 18px;
+      position: relative;
+      left: -1px;
+      padding-right: 5px;
+    }
+  }
+
+  .callout {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .signup-form {
+    width: 100%;
+    border: 0;
+    padding: 20px;
+  }
+}

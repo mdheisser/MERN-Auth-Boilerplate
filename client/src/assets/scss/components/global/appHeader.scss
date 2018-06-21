@@ -1,0 +1,58 @@
+.header-wrap {
+  border-bottom: 1px solid #dbdbdb;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .logo {
+      font-size: 22px;
+      color: #111;
+      font-weight: 700;
+    }
+
+    .navigation {
+      display: flex;
+
+      a {
+        padding: 20px;
+        color: #111;
+      }
+    }
+
+    .user-links {
+      display: flex;
+
+      a, button {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .header-wrap {
+
+    .header {
+
+      .navigation {
+
+        a {
+          padding: 10px;
+        }
+      }
+
+      .user-links {
+
+        a, button {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

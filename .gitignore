@@ -1,0 +1,10 @@
+# Dependencies
+/client/node_modules
+/server/node_modules
+
+# IDE
+/.idea
+
+# Logs
+/client/npm-debug.log*
+/server/npm-debug.log*

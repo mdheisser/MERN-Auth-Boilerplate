@@ -1,0 +1,107 @@
+body, p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: Open Sans, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #484848;
+}
+h1 {
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  line-height: 40px;
+}
+a {
+  text-decoration: none;
+  color: #007a87;
+}
+// Fix chrome autofill yellow
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+::-webkit-input-placeholder {
+  color: #767676;
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+::-moz-placeholder {
+  color: #767676;
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+:-ms-input-placeholder {
+  color: #767676;
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+:-moz-placeholder {
+  color: #767676;
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+input {
+  outline: 0;
+  font-family: Open Sans, sans-serif;
+  color: #484848;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: #fff;
+  padding: 11px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+input:focus {
+  border-color: #008489;
+}
+// Checkboxes
+input[type=checkbox] {
+  position: relative;
+  top: -1px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid #c7c7c9;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 3px #fff;
+  background: transparent;
+  margin: 0 10px 0 0;
+  clear: none;
+  cursor: pointer;
+  outline: 0;
+  padding: 3px;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 20px;
+  -webkit-appearance: none;
+}
+input[type=checkbox]:before {
+  content: "";
+  transition: all .15s linear;
+}
+input[type=checkbox]:checked:before {
+  background: #008489;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  transition: all 0.15s linear;
+}
+button {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  text-align: inherit;
+  padding: 0;
+  margin: 0;
+}

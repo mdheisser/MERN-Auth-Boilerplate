@@ -1,0 +1,16 @@
+.general-message {
+  position: relative;
+  top: -20px;
+  text-align: center;
+
+  .message-title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 15px;
+  }
+
+  a {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

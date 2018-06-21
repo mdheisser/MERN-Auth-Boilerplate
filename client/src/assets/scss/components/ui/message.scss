@@ -1,0 +1,38 @@
+.message {
+  position: relative;
+  margin-bottom: 25px;
+  border: 2px solid #dbdbdb;
+  width: 100%;
+  padding: 20px 8px;
+  border-radius: 3px;
+
+  .message-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    i {
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+
+  .message-text {
+    margin-left: 50px;
+  }
+}
+
+.message.positive .message-icon {
+  background: green;
+}
+
+.message.negative .message-icon {
+  background: #FC642D;
+}
