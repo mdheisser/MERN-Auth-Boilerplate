@@ -1,4 +1,5 @@
 import express from 'express';
+import compression from 'compression';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import Promise from 'bluebird';
@@ -9,6 +10,10 @@ const app = express();
 const env = require('../config/index.js');
 const mongoSanitize = require('express-mongo-sanitize');
 
+// Compression
+app.use(compression());
+
+// Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -17,7 +22,7 @@ app.use(mongoSanitize());
 mongoose.Promise = Promise;
 mongoose.connect(env.DATABASE.CONNECTION);
 
-// Use routes
+// Routes
 app.use('/api', index);
 app.use('/api/auth', auth);
 

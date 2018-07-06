@@ -13,7 +13,8 @@ module.exports = {
     target: 'web',
     output: {
         path: path.join(__dirname, 'build'),
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
+        publicPath: '/'
     },
     optimization: {
         minimizer: [

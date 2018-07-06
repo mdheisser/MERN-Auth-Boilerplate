@@ -4,6 +4,10 @@ var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
+var _compression = require('compression');
+
+var _compression2 = _interopRequireDefault(_compression);
+
 var _bodyParser = require('body-parser');
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
@@ -30,6 +34,10 @@ var app = (0, _express2.default)();
 var env = require('../config/index.js');
 var mongoSanitize = require('express-mongo-sanitize');
 
+// Compression
+app.use((0, _compression2.default)());
+
+// Body parser middleware
 app.use(_bodyParser2.default.json());
 app.use(_bodyParser2.default.urlencoded({ extended: true }));
 
@@ -38,11 +46,11 @@ app.use(mongoSanitize());
 _mongoose2.default.Promise = _bluebird2.default;
 _mongoose2.default.connect(env.DATABASE.CONNECTION);
 
-// Use routes
+// Routes
 app.use('/api', _index2.default);
 app.use('/api/auth', _auth2.default);
 
 // Serve app
 app.listen(4000, function () {
-  return console.log('Running on localhost:4000');
+  return console.log('Running on port 4000');
 });
