@@ -8,7 +8,7 @@ const config = {
         URL: 'http://localhost:3000'
     },
     DATABASE: {
-        CONNECTION: 'mongodb://localhost/mern_auth_boilerplate'
+        CONNECTION: 'mongodb://localhost/boilerplate_auth'
     },
     AUTH: {
         JWT_SECRET: 'mysupersecretkey'
