@@ -8,12 +8,17 @@ import decode from 'jwt-decode';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './App';
 import rootReducer from './rootReducer';
+import setAuthorizationToken from './utils/setAuthorizationToken';
 import { USER_LOGGED_IN } from './actions/auth';
 import './assets/scss/main.scss';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 if (localStorage.authToken) {
+    // Set the authorization bearer header
+    setAuthorizationToken(localStorage.authToken);
+
+    // Dispatch login action
     const payload = decode(localStorage.authToken);
     const user = {
         token: localStorage.authToken,
